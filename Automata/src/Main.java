@@ -21,14 +21,20 @@ public class Main {
 
             switch (option){
                 case 1:
-                    System.out.println();
-                    System.out.println("Capturar cadena");
-                    Cadena=input.next();
-                    ER_validada=validador_cadena.ValidarExpresion(Cadena);  //Funcion para el automata, se envia una cadena de texto
-                        if(ER_validada)
-                            System.out.println("Expresion valida");
-                        else
-                            System.out.println("La expresion no es valida");
+                    do{
+                        System.out.println();
+                        System.out.println("Para salir introduzca '/'");
+                        System.out.println("--------------------------------");
+                        System.out.println("Capturar cadena");
+                        Cadena=input.next();
+                        if(!Cadena.equals("/")) {
+                            ER_validada = validador_cadena.ValidarExpresion(Cadena);  //Funcion para el automata, se envia una cadena de texto
+                            if (ER_validada)
+                                System.out.println("Expresion valida");
+                            else
+                                System.out.println("La expresion no es valida");
+                        }
+                    }while(!Cadena.equals("/"));
                     break;
                 case 2:
                     System.out.println();
@@ -36,7 +42,7 @@ public class Main {
                     System.out.println("----------------------------------------");
                     System.out.println("Carrera: Desarrollo de software multiplataforma");
                     System.out.println("Materia: Estructura de Datos");
-                    System.out.println("4B");
+                    System.out.println("Grado: 4   |   Seccion: B");
                     System.out.println("Ricardo Sanchez Gonzalez |  22170038");
                     System.out.println("Jesus Aranda Rodriguez |  22170016");
                     System.out.println("Alfredo Cholico Brizuela |  22170184");
@@ -49,7 +55,7 @@ public class Main {
                     System.out.println();
                     break;
                 default:
-                    System.out.println("Saliendo del menu...");
+                    System.out.println("Saliendo......");
                     break;
             }
 
