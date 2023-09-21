@@ -1,9 +1,6 @@
 public class Validar {
 
-  //El estado del Automata
-    protected static char Caracter;     //El caracter que va estar leyendo el automata
-
-    private static boolean Aceptacion=true;   //Para finalizar el ciclo
+    protected static char Caracter;
     
     private static char[] NumerosPares = {'0','2','4','6','8'};
     private static char[] NumerosInPares = {'1','3','5','7','9'};
@@ -12,6 +9,7 @@ public class Validar {
 
     public static boolean ValidarExpresion(String Cadena)
     {
+        boolean Aceptacion=true;
         int Estado=0;
         int i = 0;
         while (i < Cadena.length() && Aceptacion) {
