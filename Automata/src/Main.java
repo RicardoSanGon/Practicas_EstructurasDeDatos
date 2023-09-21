@@ -56,6 +56,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("Saliendo......");
+                    option=3;
                     break;
             }
 
