@@ -154,6 +154,9 @@ public class Validar {
                         }
                     }
                 }
+                default->{
+                    Aceptacion=false;
+                }
             }
             ;
 
