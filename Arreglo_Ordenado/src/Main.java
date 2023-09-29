@@ -64,10 +64,10 @@ public class Main {
                     break;
                 default:
                     System.out.println("Saliendo......");
-                    option=3;
+                    option=8;
                     break;
             }
 
-        }while(option!=9);
+        }while(option!=8);
         }
     }

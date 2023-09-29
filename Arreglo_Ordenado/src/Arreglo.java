@@ -41,7 +41,7 @@ public class Arreglo {
     {
         for(int i=0;i<this.N;)
         {
-            if(Arreglo[i]<valor)
+            if(Arreglo[i]==valor)
                 i++;
             else
                 return i;
