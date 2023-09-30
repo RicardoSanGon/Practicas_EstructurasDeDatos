@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int option=0;
+        int option;
         int suboption=0;
         Arreglo ar=new Arreglo();
 
@@ -24,28 +24,31 @@ public class Main {
             System.out.println("8.- Salir");
             System.out.print("Opcion:");
             option=input.nextInt();
-
-            switch (option){
-                case 1:
-                    ar.Inicializar();
-                    break;
-                case 2:
-                    ar.Mostrar();
-                    break;
-                case 3:
+            char Caracter;
+            switch (option) {
+                case 1 -> ar.Inicializar();
+                case 2 -> ar.Mostrar();
+                case 3 -> {
                     System.out.println("Ingrese el valo que va buscar");
-                    char Caracter;
-                    Caracter=input.next().charAt(0);
-                    int res= ar.Buscar_Ordenado(Caracter);
-                    if(res==-1)
+                    Caracter = input.next().charAt(0);
+                    int res = ar.Buscar_Ordenado(Caracter);
+                    if (res == -1)
                         System.out.println("El valor no se encontro");
                     else
-                        System.out.println("Posicion del valor buscado: "+res);
-                    break;
-                case 4:
-                    ar.Insertar_Ordenado();
-                    break;
-                case 7:
+                        System.out.println("Posicion del valor buscado: " + res);
+                }
+                case 4 -> ar.Insertar_Ordenado();
+                case 5 -> {
+                    System.out.println("Ingrese el valor para eliminar");
+                    Caracter = input.next().charAt(0);
+                    ar.Eliminar(Caracter);
+                }
+                case 6 -> {
+                    System.out.println("Ingrese el valor para eliminar");
+                    Caracter = input.next().charAt(0);
+                    ar.Modificar(Caracter);
+                }
+                case 7 -> {
                     System.out.println();
                     System.out.println("Creditos");
                     System.out.println("----------------------------------------");
@@ -56,16 +59,16 @@ public class Main {
                     System.out.println("Jesus Aranda Rodriguez |  22170016");
                     System.out.println();
                     System.out.println("1.- Salir");
-                    suboption=input.nextInt();      //Para parar el ciclo de las opciones y no se quiten los creditos
+                    suboption = input.nextInt();      //Para parar el ciclo de las opciones y no se quiten los creditos
                     System.out.println();
                     System.out.println();
                     System.out.println();
                     System.out.println();
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Saliendo......");
-                    option=8;
-                    break;
+                    option = 8;
+                }
             }
 
         }while(option!=8);
