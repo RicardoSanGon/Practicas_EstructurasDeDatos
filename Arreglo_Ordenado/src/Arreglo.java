@@ -155,6 +155,7 @@ public class Arreglo {
                         }
                         else
                         {
+
                             for(i=N;i>=PosicionCaracter;)
                             {
                                 Arreglo[i+1]=Arreglo[i];
