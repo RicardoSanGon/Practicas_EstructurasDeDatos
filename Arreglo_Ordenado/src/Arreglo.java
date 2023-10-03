@@ -93,7 +93,7 @@ public class Arreglo {
 
         if (Character.isUpperCase(valor)){
             for (int i =0;i<=N;){
-                if (ValorCaracter<ValoresArreglos[i]){
+                if (ValorCaracter<=ValoresArreglos[i]){
                     posicion=i;
                     break;
                 }
@@ -101,7 +101,7 @@ public class Arreglo {
             }
         }
         else {
-            for (int i =0;i<N;){
+            for (int i =0;i<=N;){
                 if (ValorCaracter<ValoresArreglos[i]){
                     posicion=i;
                     break;
