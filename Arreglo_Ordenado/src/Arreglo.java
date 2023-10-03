@@ -114,7 +114,6 @@ public class Arreglo {
         }
         Arreglo[posicion] = valor;
         N++;
-        Mostrar();
     }
     public void Modificar(char valor){
         Eliminar(valor);
