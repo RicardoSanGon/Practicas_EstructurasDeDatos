@@ -41,7 +41,11 @@ public class Main {
                 case 5 -> {
                     System.out.println("Ingrese el valor para eliminar");
                     Caracter = input.next().charAt(0);
-                    ar.Eliminar(Caracter);
+                    int Eliminado=ar.Eliminar(Caracter);
+                    if(Eliminado==-1)
+                        System.out.println("Elemento no encontrado");
+                    else
+                        System.out.println("Elemento Eliminado");
                 }
                 case 6 -> {
                     System.out.println("Ingrese el valor para eliminar");

@@ -50,11 +50,11 @@ public class Arreglo {
         }
         return -1;
     }
-    public void Eliminar(char valor)
+    public int Eliminar(char valor)
     {
         int res=Buscar_Ordenado(valor);
         if(res==-1)
-            System.out.println("Elemento no encontrado");
+            return -1;
         else
         {
             for(int i=res;i<N;)
@@ -63,8 +63,8 @@ public class Arreglo {
                 i++;
             }
             N--;
-            System.out.println("Elemento eliminado");
         }
+        return 1;
     }
 
     public void Insertar_Ordenado()
@@ -116,8 +116,11 @@ public class Arreglo {
         N++;
     }
     public void Modificar(char valor){
-        Eliminar(valor);
-        Insertar_Ordenado();
+        int eliminado=Eliminar(valor);
+        if(eliminado==-1)
+            System.out.println("Elemento a modificar no encontrado");
+        else
+            Insertar_Ordenado();
     }
 
     public int BuscarValorCaracter(char valor)
