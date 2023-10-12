@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-
         int option;
         Conversion convertir=new Conversion();
-
-
         do{
             System.out.println("-------------------------");
             System.out.println("Practica Pilas");
@@ -23,14 +20,11 @@ public class Main {
             switch (option){
                 case 1->{
                     String EI;
-                    do{
-                        System.out.println();
-                        System.out.println();
-                        System.out.println("Para salir '/'");
-                        System.out.println("Ingrese expresion infija");
-                        EI=input.next();
-                        System.out.println(convertir.Convertir(EI));
-                    }while (!EI.equals("/"));
+                    System.out.println();
+                    System.out.println();
+                    System.out.println("Ingrese expresion infija");
+                    EI=input.next();
+                    System.out.println(convertir.Convertir(EI));
                 }
                 case 2->{System.out.println(convertir.Mostrar());}
                 case 3->{
