@@ -49,7 +49,10 @@ public class Cola {
                 else
                 {
                     F++;
-                    Cola[F]=Valor;
+                    if(F==I)
+                        System.out.println("Cola llena desde el final");
+                    else
+                        Cola[F]=Valor;
                 }
             }
             else
@@ -64,7 +67,10 @@ public class Cola {
                 else
                 {
                     I--;
-                    Cola[I]=Valor;
+                    if(I==F)
+                        System.out.println("Cola llena desde el inicio");
+                    else
+                        Cola[I]=Valor;
                 }
             }
         }

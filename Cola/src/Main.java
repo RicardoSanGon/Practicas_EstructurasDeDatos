@@ -45,7 +45,16 @@ public class Main {
                     System.out.println();
                     System.out.println(cola.Eliminar());
                 }
-                case 5->{}
+                case 5->{
+                    System.out.println("------------");
+                    System.out.println("Credios");
+                    System.out.println("------------");
+                    System.out.println("Estructura de datos");
+                    System.out.println("Practica pilas");
+                    System.out.println("Jesus Aranda Rodriguez || 22170016");
+                    System.out.println("Ricardo Ramon Sanchez Gonzalez || 22170038");
+                    System.out.println("Salir '/'");
+                    char salir=input.next().charAt(0);}
                 default -> op=6;
             }
         }while (op<6);
